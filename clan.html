@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Croatian Top Team</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5vh;
+    }
+
+    form p {
+      font-size: 1.5vw;
+      color: white;
+      margin: 0.5vw;
+      width: 80%;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      font-size: 1.5vw;
+      padding: 0.5vw;
+      margin-top: 0.5vw;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    form input[type="submit"],
+    form input[type="reset"] {
+      font-size: 1.5vw;
+      padding: 0.5vw 2vw;
+      background-color: #FF2c2c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 1vw;
+      width: auto;
+    }
+
+    form input[type="submit"]:hover,
+    form input[type="reset"]:hover {
+      background-color: #D3D3D3;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Naslovnica</a>
+    <a href="Novosti.html">Novosti</a>
+    <a href="programi.html">Programi</a>
+    <a href="nastim.html">Naš tim</a>
+    <a href="onama.html">O nama</a>
+    <a class="active" href="clan.html">Postani član</a>
+  </div>
+
+  <h1>Postani naš član</h1>
+
+  <div class="clanak">
+    <div class="sadrzaj">
+      <form action="clan.php" method="post">
+        <p>Ime: <input type="text" name="ime" required><span></span></p>
+        <p>Prezime: <input type="text" name="prezime" required><span></span></p>
+        <p>Datum rodenja: <input type="date" name="datum"></p>
+        <p>E-mail: <input type="email" name="email"><span></span></p>
+        <p>Spol:
+          <input type="radio" name="spol" value="Musko">Musko
+          <input type="radio" name="spol" value="Zensko">Zensko
+        </p>
+        <p>Bazni sport:
+          <select name="sport">
+            <option value="Boks">MMA</option>
+            <option value="Boks">Boks</option>
+            <option value="Kickboxing">Kickboxing</option>
+            <option value="Hrvanje">Hrvanje</option>
+            <option value="BJJ">BJJ</option>
+          </select>
+        </p>
+        <p>Zašto nam se želiš pridružiti? <br>
+          <textarea name="textarea" rows="5" cols="35"></textarea>
+        </p>
+        <input type="submit">
+        <input type="reset">
+      </form>
+
+      <br>
+      <footer>
+        <img src="logo.svg" alt="Croatian Top Team" style="width:10%; height:auto;">
+      </footer>
+</body>
+
+</html>
