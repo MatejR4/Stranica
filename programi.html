@@ -10,14 +10,25 @@
 
 <body>
 
-  <div class="navbar">
-    <a href="index.html">Naslovnica</a>
-    <a href="novosti.html">Novosti</a>
-    <a class="active" href="programi.html">Programi</a>
-    <a href="nastim.html">Naš tim</a>
-    <a href="onama.html">O nama</a>
-    <a href="clan.html">Postani član</a>
-  </div>
+  <header>
+    <a href="index.html" class="logo"><img src="logo.svg" alt="LOGO" height="100" width="100"></a>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <nav class="nav-menu">
+      <a href="index.html">Početna</a>
+      <a href="novosti.html">Novosti</a>
+      <a href="programi.html">Programi</a>
+      <a href="nastim.html">Naš tim</a>
+      <a href="onama.html">O nama</a>
+      <a href="clan.html">Postani član</a>
+    </nav>
+  </header>
+
+  <script>
+    function toggleMenu() {
+      const navMenu = document.querySelector('.nav-menu');
+      navMenu.classList.toggle('active');
+    }
+  </script>
 
   <h1>MMA</h1>
   <div class="clanak">
@@ -39,7 +50,8 @@
     <img src="mma2.jpg" alt="Trening 2">
   </div>
 
-  <br><hr><br>
+  <br>
+  <hr><br>
 
   <h1>Kickboxing</h1>
 

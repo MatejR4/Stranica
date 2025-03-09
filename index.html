@@ -5,120 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Croatian Top Team</title>
-  <style>
-    body {
-      background-image: url("gym.jpg");
-      margin: 0;
-      font-family: 'Rockwell', sans-serif;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 1vw 1vw;
-      text-align: center;
-    }
-
-    .navbar a {
-      color: #FF2c2c;
-      padding: 1vw 2vw;
-      text-decoration: none;
-      font-size: 2vw;
-      display: inline-block;
-    }
-
-    .navbar a:hover {
-    background-color: #D3D3D3;
-    color: black;
-    }
-
-    .navbar a.active{
-    background-color: #D3D3D3;
-    color: black;
-    }
-
-    .dropdown {
-      display: inline-block;
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      left: 0;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 1vw;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .slideshow {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .slajd {
-      display: none;
-    }
-
-    .slika {
-      width: 100%;
-      height: auto;
-    }
-
-    .Polje {
-      background-color: rgba(0, 0, 0, 0.8);
-      font-size: 2vw;
-      line-height: 1.6;
-      color: white;
-      text-align: center;
-    }
-
-    .napomena {
-      text-align: left;
-      font-size: 1vw;
-    }
-
-    .lista {
-      text-align: left;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1vw;
-      background-color: rgba(0, 0, 0, 1);
-    }
-  </style>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
-  <div class="navbar">
-    <a class="active" href="index.html">Naslovnica</a>
-    <a href="novosti.html">Novosti</a>
-    <a href="programi.html">Programi</a>
-    <a href="nastim.html">Naš tim</a>
-    <a href="onama.html">O nama</a>
-    <a href="clan.html">Postani član</a>
-  </div>
+  <header>
+    <a href="index.html" class="logo"><img src="logo.svg" alt="LOGO" height="100" width="100"></a>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <nav class="nav-menu">
+      <a href="index.html">Početna</a>
+      <a href="novosti.html">Novosti</a>
+      <a href="programi.html">Programi</a>
+      <a href="nastim.html">Naš tim</a>
+      <a href="onama.html">O nama</a>
+      <a href="clan.html">Postani član</a>
+    </nav>
+  </header>
+
+  <script>
+    function toggleMenu() {
+      const navMenu = document.querySelector('.nav-menu');
+      navMenu.classList.toggle('active');
+    }
+  </script>
 
   <div class="slideshow">
     <div class="slajd">

@@ -17,8 +17,8 @@
       padding: 6%;
       margin: 3% 3% 0% 3%;
       cursor: pointer;
-      width: 40%;
-      font-size: 250%;
+      width: 70%;
+      font-size: 200%;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
@@ -30,8 +30,8 @@
       color: red;
       padding: 6%;
       margin: 0% 3% 3% 3%;
-      width: 40%;
-      font-size: 250%;
+      width: 70%;
+      font-size: 200%;
       text-align: center;
       margin-left: auto;
       margin-right: auto;
@@ -47,30 +47,44 @@
 
 <body>
 
-  <div class="navbar">
-    <a href="index.html">Naslovnica</a>
-    <a href="novosti.html">Novosti</a>
-    <a href="programi.html">Programi</a>
-    <a href="nastim.html">Naš tim</a>
-    <a class="active" href="onama.html">O nama</a>
-    <a href="clan.html">Postani član</a>
-  </div>
+  <header>
+    <a href="index.html" class="logo"><img src="logo.svg" alt="LOGO" height="100" width="100"></a>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+    <nav class="nav-menu">
+      <a href="index.html">Početna</a>
+      <a href="novosti.html">Novosti</a>
+      <a href="programi.html">Programi</a>
+      <a href="nastim.html">Naš tim</a>
+      <a href="onama.html">O nama</a>
+      <a href="clan.html">Postani član</a>
+    </nav>
+  </header>
 
-  <h1>O nama</h1>
+  <script>
+    function toggleMenu() {
+      const navMenu = document.querySelector('.nav-menu');
+      navMenu.classList.toggle('active');
+    }
+  </script>
+
   <div class="clanak">
     <div class="sadrzaj">
       <p>
-        Smješteni u gradu Rijeci, na adresi Trg Viktora Bubnja 1, 51000, Rijeka, Croatian Top team (CTT) je vrhunska teretana za one koji ozbiljno žele trenirati MMA i kickboxing. 
-        Teretana je opremljena najmodernijom i najboljom opremom te vrhunskim stručnjacima. Ovo je mjesto gdje se stvaraju pravi borci.
-        Bilo da ste početnik ili iskusni borac, CTT je mjesto gdje možete doseći svoj puni potencijal. <a href="clan.html">Pridružite se</a> i postanite dio obitelji!
+        Smješteni u gradu Rijeci, na adresi Trg Viktora Bubnja 1, 51000, Rijeka, Croatian Top team (CTT) je vrhunska
+        teretana za one koji ozbiljno žele trenirati MMA i kickboxing.
+        Teretana je opremljena najmodernijom i najboljom opremom te vrhunskim stručnjacima. Ovo je mjesto gdje se
+        stvaraju pravi borci.
+        Bilo da ste početnik ili iskusni borac, CTT je mjesto gdje možete doseći svoj puni potencijal. <a
+          href="clan.html">Pridružite se</a> i postanite dio obitelji!
       </p>
     </div>
   </div>
 
-  <h1 style="margin-top: 10%">Često postavljena pitanja</h1>
+  <h1 style="margin-top: 10%">FAQ</h1>
 
   <div class="pravokutnik">
-    <div class="pitanje" onclick="Tipka('odg1')">Ja sam profesionalni ili amaterski borac koji se želi pridružiti timu</div>
+    <div class="pitanje" onclick="Tipka('odg1')">Ja sam profesionalni ili amaterski borac koji se želi pridružiti timu
+    </div>
     <div class="odgovor" id="odg1">Ako ste amaterski borac ili nadolazeći profesionalac ispunite <a
         href="clan.html">formular</a>.</div>
 
